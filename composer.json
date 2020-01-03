@@ -1,7 +1,7 @@
 {
     "name": "danilovl/static-container-twig-extension-bundle",
     "description": "Symfony twig extension bundle provide sharing data between templates",
-    "type": "library",
+    "type": "symfony-bundle",
     "license": "MIT",
     "keywords": ["php","symfony","bundle","twig extension"],
     "authors": [
