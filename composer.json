@@ -1,0 +1,20 @@
+{
+    "name": "danilovl/static-container-twig-extension-bundle",
+    "description": "Symfony twig extension bundle provide sharing data between templates",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["php","symfony","bundle","twig extension"],
+    "authors": [
+        {
+            "name": "Vladimir Danilov"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Danilovl\\StaticContainerTwigExtensionBundle\\": "src/" }
+    },
+    "require": {
+        "php": "^7.3.0",
+        "symfony/framework-bundle": "^4.4",
+        "symfony/twig-bundle": "^4.4"
+    }
+}
