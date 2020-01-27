@@ -1,0 +1,6 @@
+services:
+  danilovl.static_container:
+    class: Danilovl\StaticContainerTwigExtensionBundle\Services\StaticContainerService
+    public: true
+
+  Danilovl\StaticContainerTwigExtensionBundle\Services\StaticContainerService: '@danilovl.static_container'

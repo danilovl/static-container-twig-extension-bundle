@@ -2,5 +2,7 @@ services:
   danilovl_static_container_twig_extension:
     class: Danilovl\StaticContainerTwigExtensionBundle\Twig\StaticContainerExtension
     public: false
+    arguments:
+      - '@danilovl.static_container'
     tags:
       - { name: twig.extension }

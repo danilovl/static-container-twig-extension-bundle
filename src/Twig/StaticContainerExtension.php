@@ -2,6 +2,7 @@
 
 namespace Danilovl\StaticContainerTwigExtensionBundle\Twig;
 
+use Danilovl\StaticContainerTwigExtensionBundle\Services\StaticContainerService;
 use Twig\TwigFunction;
 use FinalWork\FinalWorkBundle\Services\{
     MenuService,
@@ -14,9 +15,17 @@ use Twig\Extension\AbstractExtension;
 class StaticContainerExtension extends AbstractExtension
 {
     /**
-     * @var array
+     * @var StaticContainerService
      */
-    private $container = [];
+    private $staticContainerService;
+
+    /**
+     * @param StaticContainerService $staticContainerService
+     */
+    public function __construct(StaticContainerService $staticContainerService)
+    {
+        $this->staticContainerService = $staticContainerService;
+    }
 
     /**
      * {@inheritdoc}
@@ -38,11 +47,7 @@ class StaticContainerExtension extends AbstractExtension
      */
     public function create(string $key, $value = null): void
     {
-        if ($this->has($key)) {
-            return;
-        }
-
-        $this->container[$key] = $value;
+        $this->staticContainerService->create($key, $value);
     }
 
     /**
@@ -51,7 +56,7 @@ class StaticContainerExtension extends AbstractExtension
      */
     public function update(string $key, $value): void
     {
-        $this->container[$key] = $value;
+        $this->staticContainerService->update($key, $value);
     }
 
     /**
@@ -60,7 +65,7 @@ class StaticContainerExtension extends AbstractExtension
      */
     public function has(string $key): bool
     {
-        return isset($this->container[$key]);
+        return $this->staticContainerService->has($key);
     }
 
     /**
@@ -69,7 +74,7 @@ class StaticContainerExtension extends AbstractExtension
      */
     public function get(string $key)
     {
-        return $this->container[$key];
+        return $this->staticContainerService->get($key);
     }
 
     /**
@@ -77,6 +82,6 @@ class StaticContainerExtension extends AbstractExtension
      */
     public function remove(string $key): void
     {
-        unset($this->container[$key]);
+        $this->staticContainerService->remove($key);
     }
 }
