@@ -8,9 +8,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class StaticContainerTwigExtensionBundle extends Bundle
 {
-    /**
-     * @return StaticContainerExtension
-     */
     public function getContainerExtension(): StaticContainerExtension
     {
         return new StaticContainerExtension;

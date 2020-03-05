@@ -14,22 +14,13 @@ use Twig\Extension\AbstractExtension;
 
 class StaticContainerExtension extends AbstractExtension
 {
-    /**
-     * @var StaticContainerService
-     */
-    private $staticContainerService;
+	private StaticContainerService $staticContainerService;
 
-    /**
-     * @param StaticContainerService $staticContainerService
-     */
     public function __construct(StaticContainerService $staticContainerService)
     {
         $this->staticContainerService = $staticContainerService;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getFunctions(): array
     {
         return [
@@ -41,45 +32,26 @@ class StaticContainerExtension extends AbstractExtension
         ];
     }
 
-    /**
-     * @param string $key
-     * @param $value
-     */
     public function create(string $key, $value = null): void
     {
         $this->staticContainerService->create($key, $value);
     }
 
-    /**
-     * @param string $key
-     * @param $value
-     */
     public function update(string $key, $value): void
     {
         $this->staticContainerService->update($key, $value);
     }
 
-    /**
-     * @param string $key
-     * @return bool
-     */
     public function has(string $key): bool
     {
         return $this->staticContainerService->has($key);
     }
 
-    /**
-     * @param string $key
-     * @return mixed
-     */
     public function get(string $key)
     {
         return $this->staticContainerService->get($key);
     }
 
-    /**
-     * @param string $key
-     */
     public function remove(string $key): void
     {
         $this->staticContainerService->remove($key);
