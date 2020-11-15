@@ -14,7 +14,7 @@ use Twig\Extension\AbstractExtension;
 
 class StaticContainerExtension extends AbstractExtension
 {
-	private StaticContainerService $staticContainerService;
+    private StaticContainerService $staticContainerService;
 
     public function __construct(StaticContainerService $staticContainerService)
     {

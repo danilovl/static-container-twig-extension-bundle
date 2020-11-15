@@ -4,7 +4,7 @@ namespace Danilovl\StaticContainerTwigExtensionBundle\Services;
 
 class StaticContainerService
 {
-	private array $container = [];
+    private array $container = [];
 
     public function create(string $key, $value = null): void
     {
