@@ -14,11 +14,8 @@ use Twig\Extension\AbstractExtension;
 
 class StaticContainerExtension extends AbstractExtension
 {
-    private StaticContainerService $staticContainerService;
-
-    public function __construct(StaticContainerService $staticContainerService)
+    public function __construct(private StaticContainerService $staticContainerService)
     {
-        $this->staticContainerService = $staticContainerService;
     }
 
     public function getFunctions(): array
@@ -47,7 +44,7 @@ class StaticContainerExtension extends AbstractExtension
         return $this->staticContainerService->has($key);
     }
 
-    public function get(string $key)
+    public function get(string $key): mixed
     {
         return $this->staticContainerService->get($key);
     }

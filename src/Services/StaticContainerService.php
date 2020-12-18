@@ -6,7 +6,7 @@ class StaticContainerService
 {
     private array $container = [];
 
-    public function create(string $key, $value = null): void
+    public function create(string $key, mixed $value = null): void
     {
         if ($this->has($key)) {
             return;
@@ -15,7 +15,7 @@ class StaticContainerService
         $this->container[$key] = $value;
     }
 
-    public function update(string $key, $value): void
+    public function update(string $key, mixed $value): void
     {
         $this->container[$key] = $value;
     }
@@ -25,7 +25,7 @@ class StaticContainerService
         return isset($this->container[$key]);
     }
 
-    public function get(string $key)
+    public function get(string $key): mixed
     {
         return $this->container[$key];
     }
