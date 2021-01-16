@@ -1,5 +1,5 @@
 services:
-  danilovl_static_container_twig_extension:
+  danilovl.static_container.twig_extension:
     class: Danilovl\StaticContainerTwigExtensionBundle\Twig\StaticContainerExtension
     public: false
     arguments:
