@@ -4,12 +4,6 @@ namespace Danilovl\StaticContainerTwigExtensionBundle\Twig;
 
 use Danilovl\StaticContainerTwigExtensionBundle\Services\StaticContainerService;
 use Twig\TwigFunction;
-use FinalWork\FinalWorkBundle\Services\{
-    MenuService,
-    SystemEventLinkGeneratorService
-};
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpFoundation\Response;
 use Twig\Extension\AbstractExtension;
 
 class StaticContainerExtension extends AbstractExtension
