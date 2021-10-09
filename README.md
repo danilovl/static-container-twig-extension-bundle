@@ -1,4 +1,7 @@
 [![phpunit](https://github.com/danilovl/static-container-twig-extension-bundle/actions/workflows/phpunit.yml/badge.svg)](https://github.com/danilovl/static-container-twig-extension-bundle/actions/workflows/phpunit.yml)
+[![downloads](https://img.shields.io/packagist/dt/danilovl/static-container-twig-extension-bundle)](https://packagist.org/packages/danilovl/static-container-twig-extension-bundle)
+[![latest Stable Version](https://img.shields.io/packagist/v/danilovl/static-container-twig-extension-bundle)](https://packagist.org/packages/danilovl/static-container-twig-extension-bundle)
+[![license](https://img.shields.io/packagist/l/danilovl/static-container-twig-extension-bundle)](https://packagist.org/packages/danilovl/static-container-twig-extension-bundle)
 
 # StaticContainerTwigExtensionBundle #
 
@@ -71,4 +74,7 @@ Remove key.
 {# templates/third.html.twig #}
 {{ static_container_remove('sameKey') }}
 ```
- 
+
+## License
+
+The ApplyFilterTwigExtensionBundle is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
