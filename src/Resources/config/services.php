@@ -3,11 +3,11 @@
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 use Danilovl\StaticContainerTwigExtensionBundle\Interfaces\StaticContainerServiceInterface;
-use Danilovl\StaticContainerTwigExtensionBundle\Services\StaticContainerService;
+use Danilovl\StaticContainerTwigExtensionBundle\Service\StaticContainerService;
 
 return static function (ContainerConfigurator $container): void {
     $container->services()
-        ->set('danilovl.static_container', StaticContainerService::class)
+        ->set(StaticContainerService::class, StaticContainerService::class)
         ->public()
-        ->alias(StaticContainerServiceInterface::class, 'danilovl.static_container');
+        ->alias(StaticContainerServiceInterface::class, StaticContainerService::class);
 };

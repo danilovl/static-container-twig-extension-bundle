@@ -2,7 +2,6 @@ services:
   danilovl.static_container.twig_extension:
     class: Danilovl\StaticContainerTwigExtensionBundle\Twig\StaticContainerExtension
     public: false
-    arguments:
-      - '@danilovl.static_container'
+    autowire: true
     tags:
       - { name: twig.extension }
