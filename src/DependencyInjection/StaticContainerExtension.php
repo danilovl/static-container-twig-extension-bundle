@@ -9,7 +9,6 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class StaticContainerExtension extends Extension
 {
-    public const ALIAS = 'danilovl_static_container';
     private const DIR_CONFIG = '/../Resources/config';
 
     public function load(array $configs, ContainerBuilder $container): void
@@ -17,10 +16,5 @@ class StaticContainerExtension extends Extension
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . self::DIR_CONFIG));
         $loader->load('services.yaml');
         $loader->load('twig.yaml');
-    }
-
-    public function getAlias(): string
-    {
-        return self::ALIAS;
     }
 }

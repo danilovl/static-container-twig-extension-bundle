@@ -2,7 +2,7 @@
 
 namespace Danilovl\StaticContainerTwigExtensionBundle\Tests\Twig;
 
-use Danilovl\StaticContainerTwigExtensionBundle\Services\StaticContainerService;
+use Danilovl\StaticContainerTwigExtensionBundle\Service\StaticContainerService;
 use Danilovl\StaticContainerTwigExtensionBundle\Twig\StaticContainerExtension;
 use Generator;
 use PHPUnit\Framework\TestCase;

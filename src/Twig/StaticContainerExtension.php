@@ -2,13 +2,13 @@
 
 namespace Danilovl\StaticContainerTwigExtensionBundle\Twig;
 
-use Danilovl\StaticContainerTwigExtensionBundle\Services\StaticContainerService;
+use Danilovl\StaticContainerTwigExtensionBundle\Interfaces\StaticContainerServiceInterface;
 use Twig\TwigFunction;
 use Twig\Extension\AbstractExtension;
 
 class StaticContainerExtension extends AbstractExtension
 {
-    public function __construct(private StaticContainerService $staticContainerService)
+    public function __construct(private StaticContainerServiceInterface $staticContainerService)
     {
     }
 
