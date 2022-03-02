@@ -24,7 +24,7 @@ class StaticContainerService implements StaticContainerServiceInterface
 
     public function has(string $key): bool
     {
-        return isset($this->container[$key]);
+        return array_key_exists($key, $this->container);
     }
 
     public function get(string $key): mixed
