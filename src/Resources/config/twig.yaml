@@ -1,6 +1,5 @@
 services:
-  danilovl.static_container.twig_extension:
-    class: Danilovl\StaticContainerTwigExtensionBundle\Twig\StaticContainerExtension
+  Danilovl\StaticContainerTwigExtensionBundle\Twig\StaticContainerExtension:
     public: false
     autowire: true
     tags:
