@@ -3,7 +3,6 @@
 namespace Danilovl\StaticContainerTwigExtensionBundle;
 
 use Danilovl\StaticContainerTwigExtensionBundle\DependencyInjection\StaticContainerExtension;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class StaticContainerTwigExtensionBundle extends Bundle
