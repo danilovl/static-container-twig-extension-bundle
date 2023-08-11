@@ -5,6 +5,7 @@ namespace Danilovl\StaticContainerTwigExtensionBundle\Tests\Twig;
 use Danilovl\StaticContainerTwigExtensionBundle\Service\StaticContainerService;
 use Danilovl\StaticContainerTwigExtensionBundle\Twig\StaticContainerExtension;
 use Generator;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
@@ -23,9 +24,7 @@ class StaticContainerExtensionTest extends TestCase
         $this->twig->addExtension($renderServiceExtension);
     }
 
-    /**
-     * @dataProvider filtersProvider
-     */
+    #[DataProvider('filtersProvider')]
     public function testFilters(
         string $firstTemplate,
         string $secondTemplate,
@@ -37,7 +36,7 @@ class StaticContainerExtensionTest extends TestCase
         $this->assertEquals($expectedValue, $output);
     }
 
-    public function filtersProvider(): Generator
+    public static function filtersProvider(): Generator
     {
         yield ["{{ static_container_create('staticKey', 'static value text') }}", "{{ static_container_get('staticKey') }}", 'static value text'];
         yield ["{{ static_container_update('staticKey', 'new static value text') }}", "{{ static_container_get('staticKey') }}", 'new static value text'];
