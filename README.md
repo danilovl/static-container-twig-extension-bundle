@@ -11,8 +11,8 @@ Twig extension provide sharing data between templates.
 
 ### Requirements 
 
-  * PHP 8.3.0 or higher
-  * Symfony 6.3 or higher
+  * PHP 8.3 or higher
+  * Symfony 7.0 or higher
 
 ### 1. Installation
 
