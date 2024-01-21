@@ -23,12 +23,12 @@ class StaticContainerExtension extends AbstractExtension
         ];
     }
 
-    public function create(string $key, $value = null): void
+    public function create(string $key, mixed $value = null): void
     {
         $this->staticContainerService->create($key, $value);
     }
 
-    public function update(string $key, $value): void
+    public function update(string $key, mixed $value): void
     {
         $this->staticContainerService->update($key, $value);
     }
