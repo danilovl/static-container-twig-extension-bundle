@@ -19,7 +19,7 @@ Twig extension provide sharing data between templates.
 Install `danilovl/static-container-twig-extension-bundle` package by Composer:
  
 ``` bash
-$ composer require danilovl/static-container-twig-extension-bundle
+composer require danilovl/static-container-twig-extension-bundle
 ```
  
 Add the StaticContainerTwigExtensionBundle to your application's bundles if does not add automatically:
