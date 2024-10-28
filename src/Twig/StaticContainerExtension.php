@@ -8,9 +8,7 @@ use Twig\Extension\AbstractExtension;
 
 class StaticContainerExtension extends AbstractExtension
 {
-    public function __construct(private readonly StaticContainerServiceInterface $staticContainerService)
-    {
-    }
+    public function __construct(private readonly StaticContainerServiceInterface $staticContainerService) {}
 
     public function getFunctions(): array
     {
