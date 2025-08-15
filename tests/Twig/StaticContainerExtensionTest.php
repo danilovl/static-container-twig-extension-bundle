@@ -24,7 +24,7 @@ class StaticContainerExtensionTest extends TestCase
         $this->twig->addExtension($renderServiceExtension);
     }
 
-    #[DataProvider('filtersProvider')]
+    #[DataProvider('provideFiltersCases')]
     public function testFilters(
         string $firstTemplate,
         string $secondTemplate,
@@ -36,7 +36,7 @@ class StaticContainerExtensionTest extends TestCase
         $this->assertEquals($expectedValue, $output);
     }
 
-    public static function filtersProvider(): Generator
+    public static function provideFiltersCases(): Generator
     {
         yield ["{{ static_container_create('staticKey', 'static value text') }}", "{{ static_container_get('staticKey') }}", 'static value text'];
         yield ["{{ static_container_update('staticKey', 'new static value text') }}", "{{ static_container_get('staticKey') }}", 'new static value text'];
